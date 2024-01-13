@@ -1,0 +1,117 @@
+:root {
+  /* Primary */
+  --dark-cyan: hsl(158, 36%, 37%);
+  --cream: hsl(30, 38%, 92%);
+  /* Neutral */
+  --very-dark-blue: hsl(212, 21%, 14%);
+  --dark-grayish-blue: hsl(228, 12%, 48%);
+  --white: hsl(0, 0%, 100%);
+}
+html {
+  font-size: 62.5%;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--cream);
+  font-size: 1.4rem;
+}
+.card-container {
+  width: 700px;
+  height: 100%;
+  overflow: hidden;
+  border-radius: 10px;
+  background-color: var(--white);
+  display: flex;
+}
+.product-picture {
+  background-image: url(images/image-product-desktop.jpg);
+  background-size: cover;
+  width: 50%;
+  background-position: center center;
+}
+
+.product-description {
+  padding: 2rem;
+  width: 50%;
+}
+.product-description p {
+  font-family: "Montserrat", sans-serif;
+  color: var(--dark-grayish-blue);
+  line-height: 1.5;
+}
+.product-description h1 {
+  font-family: "Fraunces", serif;
+  padding: 1rem 0;
+  font-size: 3rem;
+}
+#category {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.prices {
+  margin-top: 1.5rem;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+}
+.prices h2 {
+  font-family: "Fraunces", serif;
+  color: var(--dark-cyan);
+  font-size: 2rem;
+  margin-right: 1rem;
+  font-size: 3rem;
+}
+.prices p {
+  font-family: "Montserrat", sans-serif;
+  color: var(--dark-grayish-blue);
+  text-decoration: line-through;
+}
+
+.btn {
+  background-color: var(--dark-cyan);
+  border: none;
+  color: var(--white);
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.4rem;
+  padding: 2rem;
+  width: 100%;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.btn img {
+  margin-right: 0.8rem;
+}
+.btn:hover {
+  cursor: pointer;
+  background-color: var(--very-dark-blue);
+}
+
+/* Media queries */
+@media screen and (max-width: 550px) {
+  .card-container {
+    width: 350px;
+    flex-direction: column;
+    margin: 1rem;
+  }
+  .product-picture {
+    background-image: url(images/image-product-mobile.jpg);
+    background-size: cover;
+    height: 250px;
+    width: 100%;
+  }
+  .product-description {
+    width: 100%;
+  }
+}
